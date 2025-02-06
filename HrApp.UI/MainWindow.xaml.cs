@@ -40,6 +40,22 @@ namespace HrApp.UI
             //TODO: Show details of selected employee
         }
 
+        private void OnIncreaseSalary_Clicked(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
 
+            //TODO: Get selected employee
+
+            if (button.Content.ToString().Contains("2%"))
+            {
+                //TODO: Increase salary with 2%
+            }
+            else if (button.Content.ToString().Contains("3%"))
+            {
+                //TODO: Increase salary with 2%
+            }
+
+            //TODO: Show new salary in salaryLabel
+        }
     }
 }
