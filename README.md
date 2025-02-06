@@ -1,4 +1,4 @@
-# HrApp# Labo 1 - Classes
+# Labo 1 - Classes
 ## HrApp
 In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van classes
 
