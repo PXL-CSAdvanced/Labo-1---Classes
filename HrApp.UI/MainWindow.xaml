@@ -1,0 +1,88 @@
+﻿<Window x:Class="HrApp.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HrApp.UI"
+        mc:Ignorable="d"
+        Title="*** HrApp PXL ***" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Margin="10" Padding="10" Header="Nieuwe werknemer" Grid.RowSpan="2">
+            <StackPanel>
+                <Label Content="Voornaam:"/>
+                <TextBox x:Name="firstNameTextBox" Margin="10,0,10,10" Padding="5"/>
+                <Label Content="Achternaam:"/>
+                <TextBox x:Name="lastNameTextBox" Margin="10,0,10,10" Padding="5"/>
+                <Label Content="Geboortedatum:"/>
+                <DatePicker x:Name="birthDatePicker" Margin="10,0,10,10" Padding="5"/>
+                <Button Content="Toevoegen" Click="OnAddEmployee_Clicked" Margin="10,10,10,10" Padding="5"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Huidige werknemers" Grid.Column="1" Margin="10" Padding="10">
+            <StackPanel>
+                <ListBox x:Name="employeesListBox"/>
+
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Sorteren" Grid.Column="1" Grid.Row="1" Margin="10" Padding="10">
+            <StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Margin="10" Padding="10,0,10,0" Grid.Row="0" Grid.Column="0" Click="OnSortFirstNameDown_Clicked">
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Voornaam" Width="75"/>
+                            <Image Source="/img/chevrons-down.png" />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="10" Padding="10,0,10,0" Grid.Row="0" Grid.Column="1" Click="OnSortLastNameDown_Clicked">
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Achternaam" Width="75"/>
+                            <Image Source="/img/chevrons-down.png" />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="10" Padding="10,0,10,0" Grid.Row="0" Grid.Column="2" Click="OnSortAgeDown_Clicked">
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Leeftijd" Width="75"/>
+                            <Image Source="/img/chevrons-down.png" />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="10" Padding="10,0,10,0" Grid.Row="1" Grid.Column="0" Click="OnSortFirstNameUp_Clicked">
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Voornaam" Width="75"/>
+                            <Image Source="/img/chevrons-up.png" />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="10" Padding="10,0,10,0" Grid.Row="2" Grid.Column="1" Click="OnSortLastNameUp_Clicked">
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Achternaam" Width="75"/>
+                            <Image Source="/img/chevrons-up.png" />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="10" Padding="10,0,10,0" Grid.Row="3" Grid.Column="2" Click="OnSortAgeUp_Clicked">
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Leeftijd" Width="75"/>
+                            <Image Source="/img/chevrons-up.png" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>

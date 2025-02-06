@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="chevrons-down.png" />
+    <None Remove="chevrons-up.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\chevrons-up.png" />
+    <Resource Include="img\chevrons-down.png" />
+  </ItemGroup>
+
+</Project>
