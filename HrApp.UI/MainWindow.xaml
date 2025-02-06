@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HrApp.UI"
         mc:Ignorable="d"
-        Title="*** HrApp PXL ***" Height="450" Width="800">
+        Title="*** HrApp PXL ***" Height="450" Width="1200">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -14,6 +14,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <GroupBox Margin="10" Padding="10" Header="Nieuwe werknemer" Grid.RowSpan="2">
             <StackPanel>
@@ -23,14 +24,13 @@
                 <TextBox x:Name="lastNameTextBox" Margin="10,0,10,10" Padding="5"/>
                 <Label Content="Geboortedatum:"/>
                 <DatePicker x:Name="birthDatePicker" Margin="10,0,10,10" Padding="5"/>
+                <Label Content="Salaris (€/maand):" />
+                <TextBox x:Name="salaryTextBox" Margin="10,0,10,10" Padding="5"/>
                 <Button Content="Toevoegen" Click="OnAddEmployee_Clicked" Margin="10,10,10,10" Padding="5"/>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Huidige werknemers" Grid.Column="1" Margin="10" Padding="10">
-            <StackPanel>
-                <ListBox x:Name="employeesListBox"/>
-
-            </StackPanel>
+            <ListBox x:Name="employeesListBox" SelectionMode="Single" SelectionChanged="OnSelectedEmployeeChanged"/>
         </GroupBox>
         <GroupBox Header="Sorteren" Grid.Column="1" Grid.Row="1" Margin="10" Padding="10">
             <StackPanel>
@@ -82,6 +82,16 @@
                         </StackPanel>
                     </Button>
                 </Grid>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Selectie" Grid.Column="2" Grid.RowSpan="2" Margin="10" Padding="10">
+            <StackPanel>
+                <Label x:Name="firstNameLabel" Content="Voornaam" Margin="10,0,10,10" Padding="5"/>
+                <Label x:Name="lastNameLabel" Content="Achternaam" Margin="10,0,10,10" Padding="5"/>
+                <Label x:Name="ageLabel" Content="Leeftijd" Margin="10,0,10,10" Padding="5"/>
+                <Label x:Name="salaryLabel" Content="Salaris" Margin="10,0,10,10" Padding="5"/>
+                <Button Content="Salaris + 2%" Margin="10,0,10,10" Padding="5"/>
+                <Button Content="Salaris + 3%" Margin="10,0,10,10" Padding="5"/>
             </StackPanel>
         </GroupBox>
     </Grid>

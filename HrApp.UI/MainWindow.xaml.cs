@@ -28,14 +28,21 @@ namespace HrApp.UI
 
         private void OnAddEmployee_Clicked(object sender, RoutedEventArgs e)
         {
-            string fullName = $"{firstNameTextBox.Text} {lastNameTextBox.Text} ({birthDatePicker.SelectedDate})";
+            //TODO: Refactor code -> create Employee instance and add to listbox
+            string fullName = $"{firstNameTextBox.Text} {lastNameTextBox.Text} ({birthDatePicker.SelectedDate}) - {salaryTextBox.Text:c}";
 
             _employees.Add(fullName);
         }
 
         private void SortEmployees(string property, bool reversed)
         {
+            //TODO: Implement sorting
             throw new NotImplementedException();
+        }
+
+        private void OnSelectedEmployeeChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //TODO: Show details of selected employee
         }
 
         #region Sort Button Events
@@ -68,8 +75,8 @@ namespace HrApp.UI
         {
             SortEmployees("birthDate", true);
         }
-        #endregion
 
+        #endregion
 
     }
 }
