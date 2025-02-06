@@ -16,22 +16,33 @@ namespace HrApp.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<string> _employees;
-
         public MainWindow()
         {
             InitializeComponent();
-
-            _employees = new List<string>();
-            employeesListBox.DataContext = _employees;
         }
 
         private void OnAddEmployee_Clicked(object sender, RoutedEventArgs e)
         {
             //TODO: Refactor code -> create Employee instance and add to listbox
-            string fullName = $"{firstNameTextBox.Text} {lastNameTextBox.Text} ({birthDatePicker.SelectedDate}) - {salaryTextBox.Text:c}";
 
-            _employees.Add(fullName);
+            //string fullName = $"{firstNameTextBox.Text} {lastNameTextBox.Text} ({birthDatePicker.SelectedDate}) - {salaryTextBox.Text:c}";
+            //_employees.Add(fullName);
+
+            //Employee employee = new Employee();
+            try
+            {
+                Employee employee = new Employee(firstNameTextBox.Text, lastNameTextBox.Text);
+                //employee.FirstName = firstNameTextBox.Text;
+                //employee.LastName = lastNameTextBox.Text;
+                employee.BirthDate = birthDatePicker.SelectedDate.Value;
+                employee.Salary = decimal.Parse(salaryTextBox.Text);
+
+                employeesListBox.Items.Add(employee);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void SortEmployees(string property, bool reversed)
@@ -43,40 +54,36 @@ namespace HrApp.UI
         private void OnSelectedEmployeeChanged(object sender, SelectionChangedEventArgs e)
         {
             //TODO: Show details of selected employee
+            Employee employee = employeesListBox.SelectedItem as Employee;
+
+            if(employee is not null)
+            {
+                firstNameLabel.Content = employee.FirstName;
+                lastNameLabel.Content = employee.LastName;
+                ageLabel.Content = employee.Age;
+                salaryLabel.Content = employee.Salary.ToString("c");
+            }
         }
 
-        #region Sort Button Events
-        private void OnSortFirstNameDown_Clicked(object sender, RoutedEventArgs e)
+        private void OnIncreaseSalary_Clicked(object sender, RoutedEventArgs e)
         {
-            SortEmployees("firstName", false);
+            Button button = sender as Button;
+
+            Employee employee = employeesListBox.SelectedItem as Employee;
+
+            if (employee is not null)
+            {
+                if (button.Content.ToString().Contains("2%"))
+                {
+                    employee.IncreaseSalary(2);
+                }
+                else if (button.Content.ToString().Contains("3%"))
+                {
+                    employee.IncreaseSalary(3);
+                }
+            }
+
+            salaryLabel.Content = employee.Salary.ToString("c");
         }
-
-        private void OnSortLastNameDown_Clicked(object sender, RoutedEventArgs e)
-        {
-            SortEmployees("lastName", false);
-        }
-
-        private void OnSortAgeDown_Clicked(object sender, RoutedEventArgs e)
-        {
-            SortEmployees("birthDate", false);
-        }
-
-        private void OnSortFirstNameUp_Clicked(object sender, RoutedEventArgs e)
-        {
-            SortEmployees("firstName", true);
-        }
-
-        private void OnSortLastNameUp_Clicked(object sender, RoutedEventArgs e)
-        {
-            SortEmployees("lastName", true);
-        }
-
-        private void OnSortAgeUp_Clicked(object sender, RoutedEventArgs e)
-        {
-            SortEmployees("birthDate", true);
-        }
-
-        #endregion
-
     }
 }

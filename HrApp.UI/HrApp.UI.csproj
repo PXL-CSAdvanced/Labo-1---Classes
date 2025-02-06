@@ -13,9 +13,4 @@
     <None Remove="chevrons-up.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="img\chevrons-up.png" />
-    <Resource Include="img\chevrons-down.png" />
-  </ItemGroup>
-
 </Project>
