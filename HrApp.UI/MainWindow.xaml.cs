@@ -45,12 +45,6 @@ namespace HrApp.UI
             }
         }
 
-        private void SortEmployees(string property, bool reversed)
-        {
-            //TODO: Implement sorting
-            throw new NotImplementedException();
-        }
-
         private void OnSelectedEmployeeChanged(object sender, SelectionChangedEventArgs e)
         {
             //TODO: Show details of selected employee
