@@ -9,6 +9,7 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 	- ```string lastName```
 	- ```DateTime birthDate```
 	- ```decimal salary```
+   
 	> [!TIP] 
 	> Tip1: Denk aan de [naming conventions](https://github.com/PXL-Digital/PXL_Coding_Conventions/blob/main/CSharp/csharp_conventions.md#conventies)!
 
@@ -17,10 +18,12 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 - Maak een readonly property aan met de naam ```Age``` die de leeftijd van een werknemer retourneert
 - Maak een default constructor aan voor de klasse
 - Maak een constructor aan waarbij *firstName* en *lastName* als parameter kunnen worden meegegeven
-	> [!TIP] 
+
+  	> [!TIP] 
 	> Tip3: Gebruik de code-snippet "ctor" om snel een constructor aan te maken
 - Maak een methode ```IncreaseSalary``` die een integer met de naam ```percentage``` als parameter heeft. De methode moet het huidige salaris procentueel verhogen
-	> [!WARN] 
+
+  	> [!WARN] 
 	> Tip4: Een vermenigvuldiging of een deling van een decimal door een integer resulteert altijd in een integer
 - Voeg onderstaande functie toe aan de *Employee* klasse. *Deze functie zorgt ervoor dat wanneer een werknemer als tekst (string) wordt weergegeven, de voornaam en achternaam worden getoond*
 	```
