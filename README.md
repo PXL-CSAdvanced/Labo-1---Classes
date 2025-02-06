@@ -24,7 +24,7 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 > Tip3: Gebruik de code-snippet "ctor" om snel een constructor aan te maken
 - Maak een methode ```IncreaseSalary``` die een integer met de naam ```percentage``` als parameter heeft. De methode moet het huidige salaris procentueel verhogen
 
-> [!WARN] 
+> [!CAUTION] 
 > Tip4: Een vermenigvuldiging of een deling van een decimal door een integer resulteert altijd in een integer
 - Voeg onderstaande functie toe aan de *Employee* klasse. *Deze functie zorgt ervoor dat wanneer een werknemer als tekst (string) wordt weergegeven, de voornaam en achternaam worden getoond*
 	```
