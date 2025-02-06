@@ -28,10 +28,16 @@ namespace HrApp.UI
 
         private void OnAddEmployee_Clicked(object sender, RoutedEventArgs e)
         {
-            //TODO: Refactor code -> create Employee instance and add to listbox
-            string fullName = $"{firstNameTextBox.Text} {lastNameTextBox.Text} ({birthDatePicker.SelectedDate}) - {salaryTextBox.Text:c}";
-
-            _employees.Add(fullName);
+            try
+            {
+                //TODO: Refactor code -> create Employee instance and add to listbox
+                string fullName = $"{firstNameTextBox.Text} {lastNameTextBox.Text} ({birthDatePicker.SelectedDate}) - {salaryTextBox.Text:c}";
+                _employees.Add(fullName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void SortEmployees(string property, bool reversed)
