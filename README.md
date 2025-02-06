@@ -9,17 +9,19 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 	- ```string lastName```
 	- ```DateTime birthDate```
 	- ```decimal salary```
-> [!TIP] 
-> Tip1: Denk aan de [naming conventions](https://github.com/PXL-Digital/PXL_Coding_Conventions/blob/main/CSharp/csharp_conventions.md#conventies)!
+	> [!TIP] 
+	> Tip1: Denk aan de [naming conventions](https://github.com/PXL-Digital/PXL_Coding_Conventions/blob/main/CSharp/csharp_conventions.md#conventies)!
 
-> [!TIP] 
-> Tip2: Gebruik de code-snippet "propfull" om snel een variabele met property aan te maken
+	> [!TIP] 
+	> Tip2: Gebruik de code-snippet "propfull" om snel een variabele met property aan te maken
 - Maak een readonly property aan met de naam ```Age``` die de leeftijd van een werknemer retourneert
 - Maak een default constructor aan voor de klasse
 - Maak een constructor aan waarbij *firstName* en *lastName* als parameter kunnen worden meegegeven
-> [!TIP] 
-> Tip3: Gebruik de code-snippet "ctor" om snel een constructor aan te maken
+	> [!TIP] 
+	> Tip3: Gebruik de code-snippet "ctor" om snel een constructor aan te maken
 - Maak een methode ```IncreaseSalary``` die een integer met de naam ```percentage``` als parameter heeft. De methode moet het huidige salaris procentueel verhogen
+	> [!WARN] 
+	> Tip4: Een vermenigvuldiging of een deling van een decimal door een integer resulteert altijd in een integer
 - Voeg onderstaande functie toe aan de *Employee* klasse. *Deze functie zorgt ervoor dat wanneer een werknemer als tekst (string) wordt weergegeven, de voornaam en achternaam worden getoond*
 	```
 	public override string ToString()
@@ -41,3 +43,10 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 
 ##### Ontslag
 - Voeg een extra knop toe aan de detail-sectie waarmee een werknemer uit de lijst verwijderd kan worden
+
+##### Documentatie
+- Voeg documentatie toe aan de properties en functies van de *Employee* klasse
+- Ga terug naar het *MainWindow.xaml.cs* bestand en bekijk het resultaat wanneer je de *Employee* klasse gebruikt
+
+
+### Deel 2
