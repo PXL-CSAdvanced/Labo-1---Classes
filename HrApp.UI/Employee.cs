@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace HrApp.UI
 {
+	[Obsolete("Use HrApp.Shared.Person instead.")]
     internal class Employee
     {
 		private string _firstName;

@@ -5,6 +5,13 @@ VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrApp.UI", "HrApp.UI\HrApp.UI.csproj", "{6A63AE50-FC20-4334-81F4-EE48059E4B61}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DC4B1BE6-8416-48D6-B4CC-6D6EA5D429F3}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrApp.Shared", "HrApp.Shared\HrApp.Shared.csproj", "{92340287-D941-4E11-AAC7-F6F208CA49DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{6A63AE50-FC20-4334-81F4-EE48059E4B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A63AE50-FC20-4334-81F4-EE48059E4B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A63AE50-FC20-4334-81F4-EE48059E4B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92340287-D941-4E11-AAC7-F6F208CA49DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92340287-D941-4E11-AAC7-F6F208CA49DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92340287-D941-4E11-AAC7-F6F208CA49DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92340287-D941-4E11-AAC7-F6F208CA49DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
