@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HrApp.Shared.Address">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAEAAAAAAIAAAAAABAAIAACBCAAA=</HashCode>
+      <FileName>Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="HrApp.Shared.Employee">
-    <Position X="3.75" Y="1.75" Width="2.5" />
+    <Position X="4.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEQAGAAAAAIAAAEAEEAAAQAAAAAAAACAAAAAEQAAAg=</HashCode>
       <FileName>Employee.cs</FileName>
@@ -9,13 +16,6 @@
     <ShowAsAssociation>
       <Property Name="Address" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="HrApp.Shared.Address">
-    <Position X="7.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAIAEAAAAAAIAAAAAABAAIAACBCAAA=</HashCode>
-      <FileName>Address.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

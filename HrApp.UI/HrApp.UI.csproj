@@ -13,4 +13,8 @@
     <None Remove="chevrons-up.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HrApp.Shared\HrApp.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

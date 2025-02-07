@@ -50,10 +50,10 @@
 
         public Employee()
         {
-
+            _address = new Address();
         }
 
-        public Employee(string firstName, string lastName)
+        public Employee(string firstName, string lastName) : this() 
         {
             _firstName = firstName;
             _lastName = lastName;
