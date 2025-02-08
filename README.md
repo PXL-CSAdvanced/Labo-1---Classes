@@ -41,7 +41,24 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 	- ```string zipcode``` 
 	- ```string city``` 
 - Maak een extra eigenschap aan in de *Employee* klasse van het type *Address*
-- Zorg dat je voor elke nieuwe werknemer ook het adres kan ingeven
+- Zorg dat je voor elke nieuwe werknemer ook het adres kan ingeven, voeg hiervoor onderstaande XAML code toe net boven de "Toevoegen"-knop:
+```
+<Grid x:Name="addressGrid">
+    <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <TextBox x:Name="streetTextBox" Margin="10,0,10,10" Padding="5" Grid.ColumnSpan="2"/>
+    <TextBox x:Name="numberTextBox" Margin="10,0,10,10" Padding="5" Grid.Column="2"/>
+    <TextBox x:Name="zipcodeTextBox" Margin="10,0,10,10" Padding="5" Grid.Row="1"/>
+    <TextBox x:Name="cityTextBox" Margin="10,0,10,10" Padding="5" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+</Grid>
+```
 
 #### Extra
 ##### Ontslag
