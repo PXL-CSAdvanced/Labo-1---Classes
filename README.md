@@ -35,8 +35,6 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 	```
 - **Open het code-behind bestand *MainWindow.xaml.cs* en implementeer de nieuwe klasse!** (zie TODO's)
 
-#### Extra
-##### Address
 - Maak een nieuwe klasse ```Address``` aan met 4 eigenschappen:
 	- ```string street``` 
 	- ```string number``` 
@@ -45,6 +43,7 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 - Maak een extra eigenschap aan in de *Employee* klasse van het type *Address*
 - Zorg dat je voor elke nieuwe werknemer ook het adres kan ingeven
 
+#### Extra
 ##### Ontslag
 - Voeg een extra knop toe aan de detail-sectie waarmee een werknemer uit de lijst verwijderd kan worden
 
@@ -54,3 +53,9 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 
 
 ### Deel 2
+- Maak een nieuw project aan in de bestaande solution en noem dit HrApp.Shared, gebruik hiervoor de template *Class Library*
+- Verwijder het bestaande *Class1.cs* bestand 
+- Verplaats de bestaande klasses ```Employee``` en ```Address``` naar het nieuwe project, pas de namespace aan naar ```HrApp.Shared```
+- Zorg ervoor dat de nieuwe klasse kan gebruikt worden in het HrApp.UI project
+
+- Maak een Class Diagram ```EmployeeDiagram``` in het *HrApp.Shared* project, voeg zowel de *Employee* als de *Address* klasse toe aan dit diagram
