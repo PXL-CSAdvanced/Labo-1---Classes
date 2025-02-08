@@ -57,5 +57,6 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 - Verwijder het bestaande *Class1.cs* bestand 
 - Verplaats de bestaande klasses ```Employee``` en ```Address``` naar het nieuwe project, pas de namespace aan naar ```HrApp.Shared```
 - Zorg ervoor dat de nieuwe klasse kan gebruikt worden in het HrApp.UI project
-
+- Maak een default constructor in de *Employee* klasse waarin de *address* variabele geïnitialiseerd wordt
+- "Chain" de default constructor aan de constructor met *firstName* en *lastName* als parameter
 - Maak een Class Diagram ```EmployeeDiagram``` in het *HrApp.Shared* project, voeg zowel de *Employee* als de *Address* klasse toe aan dit diagram
