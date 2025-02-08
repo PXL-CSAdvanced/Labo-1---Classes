@@ -51,7 +51,6 @@ In dit labo gaan we een bestaande HR applicatie uitbreiden door middel van class
 - Voeg documentatie toe aan de properties en functies van de *Employee* klasse
 - Ga terug naar het *MainWindow.xaml.cs* bestand en bekijk het resultaat wanneer je de *Employee* klasse gebruikt
 
-
 ### Deel 2
 - Maak een nieuw project aan in de bestaande solution en noem dit HrApp.Shared, gebruik hiervoor de template *Class Library*
 - Verwijder het bestaande *Class1.cs* bestand 
