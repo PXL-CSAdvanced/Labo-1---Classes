@@ -31,6 +31,11 @@ namespace HrApp.UI
                 employee.BirthDate = birthDatePicker.SelectedDate.Value;
                 employee.Salary = decimal.Parse(salaryTextBox.Text);
 
+                employee.Address.Street = streetTextBox.Text;
+                employee.Address.Number = numberTextBox.Text;
+                employee.Address.ZipCode = zipcodeTextBox.Text;
+                employee.Address.City = cityTextBox.Text;
+
                 employeesListBox.Items.Add(employee);
             }
             catch (Exception ex)

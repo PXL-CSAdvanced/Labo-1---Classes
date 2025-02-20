@@ -65,7 +65,8 @@
         #region Methods & Functions
         public void IncreaseSalary(int percentage)
         {
-            this.Salary += this.Salary * Convert.ToDecimal(percentage) / 100;
+            this.Salary += this.Salary * (Convert.ToDecimal(percentage) / 100);
+            //this.Salary += this.Salary * (percentage / 100M);
         }
 
         public override string ToString()
