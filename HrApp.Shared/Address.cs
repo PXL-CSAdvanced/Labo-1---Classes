@@ -8,7 +8,8 @@ namespace HrApp.Shared
 {
     public class Address
     {
-		private string _street;
+        #region Variables & Properties
+        private string _street;
 
 		public string Street
 		{
@@ -39,5 +40,14 @@ namespace HrApp.Shared
 			set { _city = value; }
 		}
 
-	}
+		public string FullAddress
+		{
+			get
+			{
+				return $"{this.Street} {this.Number}{Environment.NewLine}{this.ZipCode}	{this.City}";
+			}
+		}
+        #endregion
+
+    }
 }

@@ -2,6 +2,7 @@
 {
     public class Employee
     {
+        #region Variables & Properties
         private string _firstName;
 
         public string FirstName
@@ -46,8 +47,9 @@
             get { return _address; }
             set { _address = value; }
         }
+        #endregion
 
-
+        #region Constructors
         public Employee()
         {
             _address = new Address();
@@ -58,7 +60,9 @@
             _firstName = firstName;
             _lastName = lastName;
         }
+        #endregion
 
+        #region Methods & Functions
         public void IncreaseSalary(int percentage)
         {
             this.Salary += this.Salary * Convert.ToDecimal(percentage) / 100;
@@ -68,5 +72,6 @@
         {
             return $"{this.FirstName} {this.LastName}";
         }
+        #endregion
     }
 }

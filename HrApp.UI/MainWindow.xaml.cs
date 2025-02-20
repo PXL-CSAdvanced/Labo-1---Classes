@@ -21,12 +21,13 @@ namespace HrApp.UI
             //string fullName = $"{firstNameTextBox.Text} {lastNameTextBox.Text} ({birthDatePicker.SelectedDate}) - {salaryTextBox.Text:c}";
             //_employees.Add(fullName);
 
-            //Employee employee = new Employee();
             try
             {
-                Employee employee = new Employee(firstNameTextBox.Text, lastNameTextBox.Text);
+                //Employee employee = new Employee();
                 //employee.FirstName = firstNameTextBox.Text;
                 //employee.LastName = lastNameTextBox.Text;
+                Employee employee = new Employee(firstNameTextBox.Text, lastNameTextBox.Text);
+      
                 employee.BirthDate = birthDatePicker.SelectedDate.Value;
                 employee.Salary = decimal.Parse(salaryTextBox.Text);
 
@@ -49,6 +50,7 @@ namespace HrApp.UI
                 lastNameLabel.Content = employee.LastName;
                 ageLabel.Content = employee.Age;
                 salaryLabel.Content = employee.Salary.ToString("c");
+                addressLabel.Content = employee.Address.FullAddress;
             }
         }
 
@@ -68,9 +70,9 @@ namespace HrApp.UI
                 {
                     employee.IncreaseSalary(3);
                 }
-            }
 
-            salaryLabel.Content = employee.Salary.ToString("c");
+                salaryLabel.Content = employee.Salary.ToString("c");
+            }
         }
     }
 }
